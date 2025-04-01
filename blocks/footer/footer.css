@@ -1,9 +1,50 @@
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-color: #202020;
+  color: #ebebeb;
+  margin-top: 3rem;
+  padding: 1rem 0 1.5rem;
 }
 
-footer .footer > div {
+#footer-container{
+  display: flex;
+}
+footer .footer-sections ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  padding: 8px;
+  /* margin: 0; */
+  /* padding-left: 0; */
+  /* font-size: var(--body-font-size-s); */
+}
+
+footer .footer-social {
+  display: inline-block;
+  justify-content: flex-end;
+  align-items: end;
+}
+
+footer #footer-text{
+  display: initial;
+}
+
+footer .footer-brand .button-container a{
+  border: none;
+  cursor: pointer;
+  /* box-sizing: none; */
+  max-width: none;
+  margin: 0;
+  /* border-radius: none; */
+  padding-left: 0.5em;
+  line-height: normal;
+  background-color: #202020;
+  /* overflow: none; */
+}
+
+footer #footer-text{
+  font-size: var(--fontSizeXSmall, 9pt);
+}
+/* footer .footer > div {
   margin: auto;
   max-width: 1200px;
   padding: 40px 24px 24px;
@@ -17,4 +58,4 @@ footer .footer p {
   footer .footer > div {
     padding: 40px 32px 24px;
   }
-}
+} */
