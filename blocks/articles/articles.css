@@ -1,0 +1,45 @@
+.article-style p {
+    font-weight: normal;
+    /* color: red; */
+    /* font-size: var(--fontSizeH2, 36px); */
+}
+
+.article-style::after {
+    border-bottom: 2px solid var(--brandPrimary, #ffea00);
+    content: "";
+    display: block;
+    padding-top: 8px;
+    width: 84px;
+    margin-left: 32px;
+}
+.button-style p a {
+    color: pink;
+}
+
+.cards > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+    grid-gap: 24px;
+}
+
+.cards > ul > li {
+    border: 1px solid #dadada;
+    background-color: var(--background-color);
+}
+
+.cards .cards-card-body {
+    margin: 16px;
+}
+
+.cards .cards-card-image {
+    line-height: 0;
+}
+
+.cards > ul > li img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}

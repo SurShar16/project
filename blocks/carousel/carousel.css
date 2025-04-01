@@ -1,0 +1,104 @@
+.carousel-container .carousel-wrapper {
+    max-width: unset;
+    padding: 0;
+}
+
+.carousel {
+    position: relative;
+    padding: 40px 24px;
+    min-height: 600px;
+}
+
+.carousel .slides-slide-image picture {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.carousel .slides-slide-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}
+
+.carousel .slides-slide-body h2 {
+    margin: 0.5em 0 0 0;
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--textColor, #202020);
+    line-height: 1.5;
+}
+
+.carousel .slides-slide-body p {
+    font-size: 18px;
+    line-height: 1.75;
+    margin: 0;
+}
+
+.carousel .slides-slide-body p a {
+    background-color: var(--brandPrimary, #ffea00);
+    border-radius: var(--buttonBorderRadius, 0);
+    color: var(--textColor, #202020);
+    float: left;
+    font-size: var(--fontSizeSmall, 14px);
+    font-weight: var(--fontWeightBold, 600);
+    padding: 1em 2.5em;
+    text-transform: uppercase;
+    margin: 1em 0;
+    text-decoration: none;
+}
+
+.carousel ul {
+    display: flex;
+    transition: tranform 0.5s ease-in-out;
+    list-style-type: none;
+}
+
+.carousel .nav-button {
+    color: white;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Container for image and text */
+.slides-slide-container {
+    position: relative; /* Allow absolute positioning inside it */
+    width: 100%;
+}
+
+/* The image styles */
+.slides-slide-image picture {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* The text container */
+.slides-slide-body {
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    color: rgb(32, 32, 32);
+    text-align: left;
+    box-sizing: border-box;
+    padding: 0 28px;
+    z-index: 1;
+}
+
+/* The heading inside the body */
+.slides-slide-body h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* The paragraph text styling */
+.slides-slide-body p {
+    font-size: 16px;
+    line-height: 1.5;
+}
