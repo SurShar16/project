@@ -143,8 +143,7 @@ export default async function decorate(block) {
     if (section) section.classList.add(`nav-${c}`);
   });
 
-  const signin = nav.querySelector(".nav-signin");
-  
+  // const signin = nav.querySelector(".nav-signin");
 
   const navBrand = nav.querySelector(".nav-brand");
   const brandLink = navBrand.querySelector(".button");
@@ -193,17 +192,16 @@ export default async function decorate(block) {
 
   const navWrapper = document.createElement("div");
   navWrapper.className = "nav-wrapper";
-  const header = document.getElementsByClassName('header-wrapper')
-  console.log(header)
+  const header = document.getElementsByClassName("header-wrapper");
+  console.log(header);
   // navWrapper.appendChild(navsignin)
   navWrapper.appendChild(nav);
-  window.addEventListener('scroll',()=>{
-    if(window.scrollY>0){
-      header[0].classList.add('scrolled')
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+      header[0].classList.add("scrolled");
+    } else {
+      header[0].classList.remove("scrolled");
     }
-    else{
-      header[0].classList.remove('scrolled')
-    }
-  })
+  });
   block.append(navWrapper);
 }
