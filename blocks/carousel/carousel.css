@@ -1,6 +1,7 @@
 .carousel-container .carousel-wrapper {
     max-width: unset;
     padding: 0;
+    margin-bottom: 80px;
 }
 
 .carousel {

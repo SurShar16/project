@@ -69,13 +69,13 @@ export default function decorate(block) {
 
   const dots = document.createElement("div");
   dots.className = "carousel-dots";
-
   // Create a dot for each slide
   [...ul.children].forEach(() => {
     const dot = document.createElement("span");
     dot.className = "dot";
     dots.appendChild(dot);
   });
+  dotsActive(currentSlideIndex, dots);
 
   leftButton.addEventListener("click", () => {
     if (currentSlideIndex > 0) {
