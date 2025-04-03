@@ -1,27 +1,67 @@
 .cards > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+    grid-gap: 24px;
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+    background-color: var(--background-color);
 }
 
 .cards .cards-card-body {
-  margin: 16px;
+    margin: 16px;
 }
 
 .cards .cards-card-image {
-  line-height: 0;
+    line-height: 0;
 }
 
 .cards > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.cards .cards-card-body a {
+    background-color: transparent;
+    color: black;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: visible;
+    color: #202020;
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    overflow-wrap: break-word;
+    white-space: wrap;
+    text-align: left;
+}
+
+.cards .cards-card-body p {
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides the overflow text */
+    text-overflow: ellipsis; /* Adds the ellipsis (...) */
+    /* border: 1px solid #ccc; */
+    color: dimgray;
+    display: block;
+    font-size: 14px;
+    margin-top: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 260px;
+}
+
+.cards h3 {
+    font-size: 24px;
 }
