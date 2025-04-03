@@ -62,6 +62,10 @@
     width: 260px;
 }
 
-.cards h3 {
-    font-size: 24px;
+.cards .cards-card-body p a {
+    background-color: red;
+}
+
+.cards .cards-card-body p {
+    background-color: blue;
 }
