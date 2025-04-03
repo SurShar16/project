@@ -59,10 +59,22 @@ footer .footer-social {
     justify-content: flex-end;
     align-items: center;
     flex: 1; /* Allow it to grow */
-}
-
-footer .footer-social p {
-    margin: 0;
+    .default-content-wrapper {
+        display: flex;
+        a {
+            background-color: var(--brandThird, #ebebeb);
+            border-radius: var(--buttonBorderRadius, 0);
+            color: #202020;
+            float: left;
+            font-size: var(--fontSizeSmall, 14px);
+            font-weight: var(--fontWeightBold, 600);
+            height: var(--buttonSize, 3pc);
+            min-width: var(--buttonSize, 3pc);
+            margin: 0;
+            height: 48px;
+            width: 48px;
+        }
+    }
 }
 
 footer .footer-text {
@@ -80,8 +92,6 @@ footer .footer-text {
 footer .footer-brand .button-container a {
     border: none;
     cursor: pointer;
-    max-width: none;
-    margin: 0;
     padding-left: 0.5em;
     line-height: normal;
     background-color: #202020;
