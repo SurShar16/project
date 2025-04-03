@@ -84,12 +84,13 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
+    width: 100%;
     color: rgb(32, 32, 32);
     text-align: left;
     box-sizing: border-box;
     padding: 0 28px;
     z-index: 1;
+    border: none;
 }
 
 /* The heading inside the body */
@@ -170,4 +171,11 @@
 .dot.active,
 .dot:focus {
     background-color: black;
+}
+
+@media (width>=900px) {
+    .slides-slide-body {
+        width: 80%;
+        border: none;
+    }
 }
