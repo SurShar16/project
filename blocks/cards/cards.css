@@ -25,7 +25,7 @@
     object-fit: cover;
 }
 
-.cards .cards-card-body a {
+.cards .cards-card-body .button-container a {
     background-color: transparent;
     color: black;
     margin: 0;
@@ -60,12 +60,4 @@
     text-transform: uppercase;
     white-space: nowrap;
     width: 260px;
-}
-
-.cards .cards-card-body p a {
-    background-color: red;
-}
-
-.cards .cards-card-body p {
-    background-color: blue;
 }
