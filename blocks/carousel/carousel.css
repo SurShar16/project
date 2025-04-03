@@ -1,6 +1,7 @@
 .carousel-container .carousel-wrapper {
     max-width: unset;
     padding: 0;
+    margin-bottom: 80px;
 }
 
 .carousel {
@@ -101,4 +102,72 @@
 .slides-slide-body p {
     font-size: 16px;
     line-height: 1.5;
+}
+
+/* Styling for left and right buttons */
+.left-button,
+.right-button {
+    cursor: pointer;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    color: green;
+    display: block;
+}
+
+.left-button:hover,
+.left-button:active,
+.left-button:focus,
+.right-button:hover,
+.right-button:active,
+.right-button:focus {
+    background-color: transparent;
+}
+
+.left-icon {
+    background-image: "../../icons/right-arrow.png";
+    transform: rotate(180deg);
+}
+
+/* Arrow button positioning (Bottom Right) */
+.right-button {
+    position: absolute;
+    bottom: -75px;
+    right: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.left-button {
+    position: absolute;
+    bottom: -75px;
+    right: 50px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+/* Styling for the dots */
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* The dot container styles */
+.carousel-dots {
+    position: absolute;
+    bottom: -50px; /* Align dots to the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2; /* Ensure dots are on top of images */
+}
+
+.dot.active,
+.dot:focus {
+    background-color: black;
 }

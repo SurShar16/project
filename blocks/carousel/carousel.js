@@ -1,34 +1,29 @@
 import { createOptimizedPicture } from "../../scripts/aem.js";
 
-let currentSlideIndex = 0; // This tracks the current slide index
-
-function leftClick() {
-  alert(currentSlideIndex);
-  if (currentSlideIndex > 0) {
-    alert(":left");
-    currentSlideIndex--;
-    updateCarousel(); // Move to the previous slide
-  }
-}
-
-function rightClick() {
-  alert(currentSlideIndex);
-  if (currentSlideIndex < ul.children.length - 1) {
-    currentSlideIndex++;
-    updateCarousel(); // Move to the next slide
-  }
-}
-
-function updateCarousel() {
-  // Hide all slides
+function updateCarousel(currentSlideIndex, ul) {
   [...ul.children].forEach((slide, index) => {
-    slide.style.display = index === currentSlideIndex ? "block" : "none";
+    if (index === currentSlideIndex) {
+      slide.style.display = "block"; // Show the current slide
+    } else {
+      slide.style.display = "none"; // Hide the other slides
+    }
+  });
+}
+
+function dotsActive(currentSlideIndex, dots) {
+  [...dots.children].forEach((dot, index) => {
+    if (index === currentSlideIndex) {
+      dot.classList.add("active");
+    } else {
+      dot.classList.remove("active");
+    }
   });
 }
 
 export default function decorate(block) {
   // Create the unordered list for the carousel items
   const ul = document.createElement("ul");
+  let currentSlideIndex = 0;
 
   // Loop through all the children of the block and create carousel items (li elements)
   [...block.children].forEach(row => {
@@ -58,23 +53,69 @@ export default function decorate(block) {
       )
   );
 
-  // Create the left and right navigation buttons
-  let leftButton = document.createElement("button");
+  const leftButton = document.createElement("button");
   leftButton.className = "left-button"; // Corrected class assignment
-  let rightButton = document.createElement("button");
+  const rightButton = document.createElement("button");
   rightButton.className = "right-button"; // Added right button class
-  leftButton.innerHTML = "<"; // Left button symbol
-  rightButton.innerHTML = ">"; // Right button symbol
+  const leftIcon = document.createElement("img");
+  leftIcon.src = "../../icons/right-arrow.png";
+  leftIcon.alt = "Description of the image";
+  leftIcon.style.transform = "rotate(180deg)";
+  leftButton.appendChild(leftIcon);
+  const rightIcon = document.createElement("img");
+  rightIcon.src = "../../icons/right-arrow.png";
+  rightIcon.alt = "Description of the image";
+  rightButton.appendChild(rightIcon);
 
-  // Attach event listeners to buttons
-  leftButton.addEventListener("click", leftClick);
-  rightButton.addEventListener("click", rightClick);
+  const dots = document.createElement("div");
+  dots.className = "carousel-dots";
+  // Create a dot for each slide
+  [...ul.children].forEach(() => {
+    const dot = document.createElement("span");
+    dot.className = "dot";
+    dots.appendChild(dot);
+  });
+  dotsActive(currentSlideIndex, dots);
+
+  leftButton.addEventListener("click", () => {
+    if (currentSlideIndex > 0) {
+      currentSlideIndex--;
+      updateCarousel(currentSlideIndex, ul);
+      dotsActive(currentSlideIndex, dots);
+    } else {
+      currentSlideIndex = ul.children.length - 1;
+      updateCarousel(currentSlideIndex, ul);
+      dotsActive(currentSlideIndex, dots);
+    }
+    console.log(currentSlideIndex);
+  });
+  rightButton.addEventListener("click", () => {
+    if (currentSlideIndex < ul.children.length - 1) {
+      currentSlideIndex++;
+      updateCarousel(currentSlideIndex, ul);
+      dotsActive(currentSlideIndex, dots);
+    } else {
+      currentSlideIndex = 0;
+      dotsActive(currentSlideIndex, dots);
+      updateCarousel(currentSlideIndex, ul);
+    }
+    console.log(currentSlideIndex);
+  });
+
+  [...dots.children].forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      currentSlideIndex = index;
+      updateCarousel(currentSlideIndex, ul, dots);
+      dotsActive(currentSlideIndex, dots);
+    });
+  });
 
   // Create the nav container and add buttons to it
   const nav = document.createElement("div");
   nav.className = "nav-button";
   nav.appendChild(leftButton);
   nav.appendChild(rightButton);
+  nav.appendChild(dots);
 
   // Clear the block content and add the new carousel structure
   block.textContent = "";
