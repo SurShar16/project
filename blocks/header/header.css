@@ -302,7 +302,6 @@ header nav .nav-tools {
 }
 
 header nav .nav-tools p {
-    /* color: red; */
     background-color: #ebebeb8a;
     border: none;
     border-radius: 0;
@@ -321,20 +320,14 @@ header nav .nav-signin {
     text-transform: uppercase;
     padding-bottom: 50px;
     padding-top: 50px;
-    position:sticky;
-    /* overflow-y: scroll; */
-    /* overflow-x: hidden; */
-    /* scroll-padding-bottom: 0px; */
-    /* scroll-padding-top: 0px; */
+    position: sticky;
     top: 0;
-    /* position: fixed; */
 }
 
-.scrolled{
- /* padding-bottom: 0s ease, padding-top 0s; */
-  padding-bottom: 10px;
-  padding-top: 10px;
-  background-color: var(--background-color);
-  width: 100%;
-  z-index: 2;
+.scrolled {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: var(--background-color);
+    width: 100%;
+    z-index: 2;
 }

@@ -1,11 +1,5 @@
 .custom-teaser {
     .teaser-wrapper {
-        .teaser > div:first-child {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            flex: 2;
-        }
         .teaser div div:nth-child(2) {
             padding: 3.5em 2em 2em;
             flex: 1;
@@ -43,4 +37,13 @@
 
 .teaser-wrapper .teaser div > div {
     flex: 2;
+}
+
+@media (width>=900px) {
+    .custom-teaser .teaser-wrapper .teaser > div:first-child {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-bet ween;
+        flex: 2;
+    }
 }
