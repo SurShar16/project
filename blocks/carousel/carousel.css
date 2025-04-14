@@ -89,7 +89,7 @@
     text-align: left;
     box-sizing: border-box;
     padding: 0 28px;
-    z-index: 1;
+    z-index: -1;
     border: none;
 }
 
@@ -165,7 +165,7 @@
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
-    z-index: 2; /* Ensure dots are on top of images */
+    z-index: -1; /* Ensure dots are on top of images */
 }
 
 .dot.active,
@@ -177,5 +177,15 @@
     .slides-slide-body {
         width: 80%;
         border: none;
+    }
+    .carousel-container h2 {
+        margin-left: 32px;
+    }
+}
+.adventures-carousel {
+    margin: 0 !important;
+    .slides-slide-body {
+        height: 180px;
+        min-height: 180px;
     }
 }

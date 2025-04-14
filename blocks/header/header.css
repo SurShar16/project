@@ -2,7 +2,7 @@
 header .nav-wrapper {
     background-color: var(--background-color);
     width: 100%;
-    z-index: 2;
+    z-index: 10;
     /* position: fixed; */
 }
 
@@ -52,6 +52,7 @@ header nav p {
 
 header nav a:any-link {
     color: currentcolor;
+    text-decoration: none;
 }
 
 /* hamburger */
@@ -183,7 +184,9 @@ header nav .nav-sections ul li {
     text-transform: uppercase;
 }
 
-header nav .nav-sections ul li:hover {
+header nav .nav-sections ul li:hover,
+li:focus,
+li:active {
     /* border: 2px var(--brandPrimary, #ffea00) solid; */
     /* text-decoration: none; */
     /* text-transform: uppercase; */
@@ -330,5 +333,5 @@ header nav .nav-signin {
     padding-top: 10px;
     background-color: var(--background-color);
     width: 100%;
-    z-index: 2;
+    z-index: 1;
 }

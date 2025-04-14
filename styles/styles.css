@@ -340,7 +340,9 @@ footer .section.starting {
     border-top: 1px solid #ebebeb;
     margin: 4rem 56px;
 }
-
+.section.sign-in-text {
+    margin-left: 32px;
+}
 .section.sign-in-text #members-only {
     font-family: var(
         --fontFamilySerif,
@@ -362,4 +364,23 @@ footer .section.starting {
     display: block;
     padding-top: 8px;
     width: 84px;
+}
+
+.section.page-title #magazine {
+    font-size: 40px;
+    margin-bottom: 13.5px;
+    margin: 27px 0 13.5px 32px;
+    font-weight: 400;
+    font-family: "Asar", Georgia, "Times New Roman", Times, serif;
+}
+.section.section.page-title #adventures {
+    font-size: 40px;
+    margin-bottom: 13.5px;
+    margin: 27px 0 13.5px 32px;
+    font-weight: 400;
+    font-family: "Asar", Georgia, "Times New Roman", Times, serif;
+}
+
+.section.cards-container {
+    margin-left: 32px;
 }

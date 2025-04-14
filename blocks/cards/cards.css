@@ -59,11 +59,6 @@
 @media (width>=900px) {
     .article-card .cards-wrapper {
         padding: 0 28px;
-        margin: 0 32px;
-    }
-    .article-card h2,
-    .article-card h3 {
-        margin: 0 32px;
     }
 
     .article-card h3 {
@@ -73,4 +68,13 @@
         font-family: "Asar", Georgia, "Times New Roman", Times, serif;
         font-weight: 400;
     }
+}
+
+.magazine-card .cards-wrapper .cards > ul > li {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.magazine-card .cards-wrapper .cards {
+    opacity: 0.65;
 }
