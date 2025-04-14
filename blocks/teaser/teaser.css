@@ -1,6 +1,7 @@
 .custom-teaser {
     .teaser-wrapper {
         .teaser div div:nth-child(2) {
+            background-color: rgb(235, 235, 235);
             padding: 3.5em 2em 2em;
             flex: 1;
             h2 {
@@ -40,10 +41,14 @@
 }
 
 @media (width>=900px) {
-    .custom-teaser .teaser-wrapper .teaser > div:first-child {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-bet ween;
-        flex: 2;
+    .custom-teaser .teaser-wrapper {
+        padding: 0 28px;
+        margin: 0 32px;
+        .teaser > div:first-child {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex: 2;
+        }
     }
 }

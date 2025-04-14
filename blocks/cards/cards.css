@@ -11,10 +11,6 @@
     background-color: var(--background-color);
 }
 
-.cards .cards-card-body {
-    margin: 16px;
-}
-
 .cards .cards-card-image {
     line-height: 0;
 }
@@ -47,10 +43,9 @@
 }
 
 .cards .cards-card-body p {
-    white-space: nowrap; /* Prevents text from wrapping */
-    overflow: hidden; /* Hides the overflow text */
-    text-overflow: ellipsis; /* Adds the ellipsis (...) */
-    /* border: 1px solid #ccc; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: dimgray;
     display: block;
     font-size: 14px;
@@ -60,4 +55,22 @@
     text-transform: uppercase;
     white-space: nowrap;
     width: 260px;
+}
+@media (width>=900px) {
+    .article-card .cards-wrapper {
+        padding: 0 28px;
+        margin: 0 32px;
+    }
+    .article-card h2,
+    .article-card h3 {
+        margin: 0 32px;
+    }
+
+    .article-card h3 {
+        font-size: 24px;
+        margin-bottom: 13.5px;
+        margin-top: 27px;
+        font-family: "Asar", Georgia, "Times New Roman", Times, serif;
+        font-weight: 400;
+    }
 }

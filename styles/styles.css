@@ -274,7 +274,7 @@ footer .section.starting {
     display: flex;
 }
 .section.link-highlight {
-    margin: 0;
+    margin: 32px;
 }
 
 .section.link-highlight a {
@@ -338,6 +338,28 @@ footer .section.starting {
 }
 .section.seperator {
     border-top: 1px solid #ebebeb;
-    margin-bottom: 4rem;
-    margin-top: 4rem;
+    margin: 4rem 56px;
+}
+
+.section.sign-in-text #members-only {
+    font-family: var(
+        --fontFamilySerif,
+        "Asar",
+        Georgia,
+        "Times New Roman",
+        Times,
+        serif
+    );
+    font-weight: var(--fontWeightNormal, normal);
+    margin-bottom: 13.5px;
+    margin-top: 27px;
+    color: var(--textColor, #202020);
+    line-height: 1.5;
+}
+.section.sign-in-text #members-only::after {
+    border-bottom: 2px solid var(--brandPrimary, #ffea00);
+    content: "";
+    display: block;
+    padding-top: 8px;
+    width: 84px;
 }
