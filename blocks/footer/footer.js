@@ -25,7 +25,6 @@ export default async function decorate(block) {
     const section = footer.children[i];
     if (section) section.classList.add(`footer-${c}`);
   });
-  console.log(document.querySelector(".footer-social"));
 
   const footerWrap = document.createElement("div");
   footerWrap.class = "footer-wrap";

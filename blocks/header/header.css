@@ -2,7 +2,7 @@
 header .nav-wrapper {
     background-color: var(--background-color);
     width: 100%;
-    z-index: 2;
+    z-index: 10;
     /* position: fixed; */
 }
 
@@ -34,9 +34,9 @@ header nav[aria-expanded="true"] {
     header nav {
         display: flex;
         justify-content: space-between;
-        gap: 0 32px;
         max-width: 1264px;
-        padding: 0 32px;
+        padding: 0 14px;
+        margin: 0 32px;
     }
 
     header nav[aria-expanded="true"] {
@@ -52,6 +52,7 @@ header nav p {
 
 header nav a:any-link {
     color: currentcolor;
+    text-decoration: none;
 }
 
 /* hamburger */
@@ -142,6 +143,7 @@ header .nav-brand {
     font-size: 60px;
     font-weight: 700;
     line-height: 1;
+    padding: 0 14px;
 }
 
 header nav .nav-brand img {
@@ -182,7 +184,9 @@ header nav .nav-sections ul li {
     text-transform: uppercase;
 }
 
-header nav .nav-sections ul li:hover {
+header nav .nav-sections ul li:hover,
+li:focus,
+li:active {
     /* border: 2px var(--brandPrimary, #ffea00) solid; */
     /* text-decoration: none; */
     /* text-transform: uppercase; */
@@ -302,7 +306,6 @@ header nav .nav-tools {
 }
 
 header nav .nav-tools p {
-    /* color: red; */
     background-color: #ebebeb8a;
     border: none;
     border-radius: 0;
@@ -321,20 +324,14 @@ header nav .nav-signin {
     text-transform: uppercase;
     padding-bottom: 50px;
     padding-top: 50px;
-    position:sticky;
-    /* overflow-y: scroll; */
-    /* overflow-x: hidden; */
-    /* scroll-padding-bottom: 0px; */
-    /* scroll-padding-top: 0px; */
+    position: sticky;
     top: 0;
-    /* position: fixed; */
 }
 
-.scrolled{
- /* padding-bottom: 0s ease, padding-top 0s; */
-  padding-bottom: 10px;
-  padding-top: 10px;
-  background-color: var(--background-color);
-  width: 100%;
-  z-index: 2;
+.scrolled {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: var(--background-color);
+    width: 100%;
+    z-index: 1;
 }

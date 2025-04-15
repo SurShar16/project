@@ -1,27 +1,80 @@
 .cards > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+    grid-gap: 24px;
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
-}
-
-.cards .cards-card-body {
-  margin: 16px;
+    background-color: var(--background-color);
 }
 
 .cards .cards-card-image {
-  line-height: 0;
+    line-height: 0;
 }
 
 .cards > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.cards .cards-card-body .button-container a {
+    background-color: transparent;
+    color: black;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: visible;
+    color: #202020;
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    overflow-wrap: break-word;
+    white-space: wrap;
+    text-align: left;
+}
+
+.cards .cards-card-body p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: dimgray;
+    display: block;
+    font-size: 14px;
+    margin-top: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 260px;
+}
+@media (width>=900px) {
+    .article-card .cards-wrapper {
+        padding: 0 28px;
+    }
+
+    .article-card h3 {
+        font-size: 24px;
+        margin-bottom: 13.5px;
+        margin-top: 27px;
+        font-family: "Asar", Georgia, "Times New Roman", Times, serif;
+        font-weight: 400;
+    }
+}
+
+.magazine-card .cards-wrapper .cards > ul > li {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.magazine-card .cards-wrapper .cards {
+    opacity: 0.65;
 }
