@@ -1,0 +1,18 @@
+.tabs ul li {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-right: 5px;
+    display: inline-block;
+    transition: 0.2s ease;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.tabs ul li.active-tab:active,
+.tabs ul li.active-tab:focus,
+.tabs ul li.active-tab {
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+}
