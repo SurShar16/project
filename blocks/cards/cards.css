@@ -1,27 +1,105 @@
 .cards > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+    grid-gap: 24px;
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
-}
-
-.cards .cards-card-body {
-  margin: 16px;
+    background-color: var(--background-color);
 }
 
 .cards .cards-card-image {
-  line-height: 0;
+    line-height: 0;
 }
 
 .cards > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.cards .cards-card-body .button-container a {
+    background-color: transparent;
+    color: black;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: visible;
+    color: #202020;
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    overflow-wrap: break-word;
+    white-space: wrap;
+    text-align: left;
+}
+
+.cards .cards-card-body p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: dimgray;
+    display: block;
+    font-size: 14px;
+    margin-top: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 260px;
+}
+@media (width>=900px) {
+    .article-card .cards-wrapper {
+        padding: 0 28px;
+    }
+
+    .article-card h3 {
+        font-size: 24px;
+        margin-bottom: 13.5px;
+        margin-top: 27px;
+        font-family: "Asar", Georgia, "Times New Roman", Times, serif;
+        font-weight: 400;
+    }
+}
+
+.magazine-card .cards-wrapper .cards > ul > li {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.magazine-card .cards-wrapper .cards {
+    opacity: 0.65;
+}
+
+.profile-card .cards-card-image picture,
+.profile-card .cards-card-image img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%; /* Makes image round */
+    height: 164px;
+    width: 164px;
+}
+.profile-card .cards-card-body h3 {
+    text-align: center;
+    margin-bottom: 0.25em;
+    margin-top: 0.5em;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "Asar", Georgia, "Times New Roman", Times, serif;
+}
+.profile-card .cards-card-body h5 {
+    text-align: center;
+    font-size: 14px;
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
 }

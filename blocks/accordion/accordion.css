@@ -1,0 +1,87 @@
+.accordion-wrapper > div > div {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-wrapper > div p {
+    margin: 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+    font-size: 1pc;
+    font-weight: 600;
+    padding-left: 0.5em;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.accordion-wrapper > div div {
+    font-size: 14px;
+    line-height: 1.75;
+    margin: 0 0 13.5px 0;
+}
+
+.accordion-wrapper > div div:not(:first-child) {
+    font-size: 14px;
+    line-height: 1.75;
+}
+.accordion-wrapper p {
+    position: relative;
+    padding-right: 20px;
+}
+
+.accordion-wrapper p::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: bold;
+    transition: transform 0.3s;
+    padding: 1em;
+}
+
+.accordion-wrapper p.active::after {
+    content: "−";
+}
+
+.faqs {
+    margin: 0 36px;
+}
+.faqs #faqs {
+    font-family: "Asar", Georgia, "Times New Roman", Times, serif;
+    font-weight: normal;
+    margin-bottom: 13.5px;
+    margin-top: 27px;
+    font-size: 40px;
+}
+
+.faqs #faqs::after {
+    border-bottom: 2px solid #ffea00;
+    content: "";
+    display: block;
+    padding-top: 8px;
+    width: 84px;
+}
+
+.faqs p {
+    font-size: 18px;
+    line-height: 2.5;
+    margin: 0 0 13.5px 0;
+    text-align: justify;
+}
+
+.faqs-contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 13.5px;
+    margin-top: 27px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #020202;
+    font-family: "Asar", Georgia, "Times New Roman", Times, serif;
+}
+.faqs-contact-info p {
+    font-size: 14px;
+    line-height: 2.5;
+    margin: 0 0 13.5px;
+}
