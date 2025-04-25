@@ -78,3 +78,28 @@
 .magazine-card .cards-wrapper .cards {
     opacity: 0.65;
 }
+
+.profile-card .cards-card-image picture,
+.profile-card .cards-card-image img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%; /* Makes image round */
+    height: 164px;
+    width: 164px;
+}
+.profile-card .cards-card-body h3 {
+    text-align: center;
+    margin-bottom: 0.25em;
+    margin-top: 0.5em;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "Asar", Georgia, "Times New Roman", Times, serif;
+}
+.profile-card .cards-card-body h5 {
+    text-align: center;
+    font-size: 14px;
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}

@@ -380,3 +380,54 @@ footer .section.starting {
     padding-top: 8px;
     width: 84px;
 }
+main:has(.faqs) {
+    display: flex;
+    margin: 0 36px;
+}
+.faqs {
+    width: 66.666%;
+    margin: 0 36px;
+}
+
+.faqs-contact-info {
+    margin-left: 8.3333333333%;
+    margin-top: 0;
+}
+
+.profile-card-heading h1 {
+    font-size: 40px;
+    font-family: "Asar", Georgia, "Times New Roman", Times, serif;
+    font-weight: 400;
+    margin-bottom: 13.5px;
+    margin-top: 27px;
+    color: #202020;
+    line-height: 1.5;
+    margin: 0 32px;
+}
+
+.profile-card-title h2 {
+    font-size: 36px;
+    font-family: "Asar", Georgia, "Times New Roman", Times, serif;
+    font-weight: normal;
+    /* margin-bottom: 13.5px; */
+    /* margin-top: 27px; */
+    margin: 27px 32px 13.5px 32px;
+}
+
+.profile-card-title h2::after {
+    border-bottom: 2px solid #ffea00;
+    content: "";
+    display: block;
+    padding-top: 8px;
+    width: 84px;
+}
+.profile-card-title p {
+    font-size: 14px;
+    line-height: 2.5;
+    margin: 0 32px 13.5px 32px;
+    text-align: justify;
+    /* margin: 0 32px; */
+}
+
+.profile-card-title-sec h2 {
+}
